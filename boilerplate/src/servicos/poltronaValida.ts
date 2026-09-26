@@ -20,3 +20,16 @@ export function fileirasDaSala(capacidade: number): string {
 }
 
 // TODO: export function poltronaValida(...) { ... }
+
+export function poltronaValida(assento: string, capacidade: number): boolean{
+  const assentoLimpo: string = assento.trim().toUpperCase()
+  const fileira: string = assentoLimpo.charAt(0);
+  const numeroTexto: string = assentoLimpo.substring(1);
+  const numero: number = Number(numeroTexto);
+  const fileirasExistentes: string = fileirasDaSala(capacidade);
+  const fileiraValida: boolean = fileirasExistentes.includes(fileira);
+
+  const numeroValido: boolean = Number.isInteger(numero) && numero >= 1 && numero <= 10;
+
+  return fileiraValida && numeroValido;
+}
