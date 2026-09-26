@@ -69,18 +69,25 @@ export interface PedidoVenda {
 
 export interface SessaoResumo {
   id: string,
-  titulo: Filme,
+  titulo: string,
   horario: string,
   sala: Sala,
   formato: Formato,
-  vendidos: Sessao,
-  capadicade: number,
+  vendidos: number,
+  capacidade: number,
   status: StatusSessao
 }
 
 // TODO (Q4): export interface Venda
 //   Um ingresso ja vendido. Precisa saber de qual sessao e, qual poltrona
 //   ocupa, quanto custou e que tipo de ingresso foi.
+
+export interface Venda {
+  sessaoId: string,
+  poltrona: string,
+  preco: number,
+  tipo: TipoIngresso
+}
 
 // TODO (Q4): export type ResultadoVenda
 //   Uma venda ou da certo ou nao da. Modele as DUAS possibilidades num
