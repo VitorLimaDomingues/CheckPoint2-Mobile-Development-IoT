@@ -21,8 +21,8 @@ export function fileirasDaSala(capacidade: number): string {
 
 // TODO: export function poltronaValida(...) { ... }
 
-export function poltronaValida(assento: string, capacidade: number): boolean{
-  const assentoLimpo: string = assento.trim().toUpperCase()
+export function poltronaValida(poltrona: string, capacidade: number): boolean {
+  const assentoLimpo: string = poltrona.trim().toUpperCase();
   const fileira: string = assentoLimpo.charAt(0);
   const numeroTexto: string = assentoLimpo.substring(1);
   const numero: number = Number(numeroTexto);
