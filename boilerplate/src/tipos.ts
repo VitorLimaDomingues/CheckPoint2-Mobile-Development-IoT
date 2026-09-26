@@ -67,6 +67,17 @@ export interface PedidoVenda {
 // TODO (Q3): export interface SessaoResumo
 //   O que a rota GET /sessoes devolve para cada sessao.
 
+export interface SessaoResumo {
+  id: string,
+  titulo: Filme,
+  horario: string,
+  sala: Sala,
+  formato: Formato,
+  vendidos: Sessao,
+  capadicade: number,
+  status: StatusSessao
+}
+
 // TODO (Q4): export interface Venda
 //   Um ingresso ja vendido. Precisa saber de qual sessao e, qual poltrona
 //   ocupa, quanto custou e que tipo de ingresso foi.
