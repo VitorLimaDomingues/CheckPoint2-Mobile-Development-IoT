@@ -24,3 +24,17 @@ export function arredondar2(valor: number): number {
 }
 
 // TODO: export function precoDoIngresso(...) { ... }
+
+export function precoDoIngresso(precoBase: number, meiaEntrada: boolean, horario: string): number {
+  let precoFinal: number = precoBase;
+
+  if (meiaEntrada === true) {
+    precoFinal = precoFinal / 2;
+  }
+  
+  if(horaDoHorario(horario) >= 18) {
+    precoFinal = precoFinal * 1.1;
+  }
+
+  return arredondar2(precoFinal);
+}
