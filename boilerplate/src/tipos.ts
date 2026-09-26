@@ -94,5 +94,13 @@ export interface Venda {
 //   tipo so, de um jeito que quem recebe seja obrigado a tratar as duas.
 //   src/api/rotas.ts mostra exatamente como a rota le este tipo.
 
+export type ResultadoVenda = | {
+  tipo: 'VENDIDO';
+  venda: Venda;
+} | {
+  tipo: "RECUSADO";
+  motivo: string;
+} 
+
 // TODO (Q5): export interface Fechamento
 //   O que a rota GET /fechamento devolve no fim do dia.
