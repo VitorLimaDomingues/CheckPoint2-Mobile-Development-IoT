@@ -1,0 +1,4 @@
+node_modules/
+.jest-resultado.json
+src/__sonda.ts
+cinefiap.db

@@ -1,0 +1,10 @@
+{
+  "editor.wordBasedSuggestions": "off",
+  "editor.snippetSuggestions": "none",
+  "javascript.suggest.enabled": false,
+  "javascript.validate.enable": false,
+  "typescript.suggest.enabled": true,
+  "typescript.validate.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": { "**/node_modules": true }
+}
