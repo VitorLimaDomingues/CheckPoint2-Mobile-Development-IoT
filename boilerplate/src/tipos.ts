@@ -104,3 +104,10 @@ export type ResultadoVenda = | {
 
 // TODO (Q5): export interface Fechamento
 //   O que a rota GET /fechamento devolve no fim do dia.
+
+export interface Fechamento {
+  ingressos: number;
+  receita: number;
+  ocupacaoPorSala: Record<string, number>;
+  sessaoMaisCheia: string | null;
+}
